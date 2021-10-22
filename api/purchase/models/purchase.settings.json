@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "purchases",
+  "info": {
+    "name": "purchase"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "purchase_date": {
+      "type": "date",
+      "required": true
+    },
+    "qty": {
+      "type": "integer",
+      "required": true
+    },
+    "expiration_date": {
+      "type": "date",
+      "required": true
+    },
+    "product": {
+      "via": "purchases",
+      "model": "product"
+    },
+    "cost_per_item": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales",
+  "info": {
+    "name": "sale"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sale_date": {
+      "type": "date",
+      "required": true
+    },
+    "qty": {
+      "type": "integer",
+      "required": true
+    },
+    "price_per_item": {
+      "type": "integer",
+      "required": true
+    },
+    "product": {
+      "via": "sales",
+      "model": "product"
+    }
+  }
+}
